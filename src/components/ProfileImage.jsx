@@ -2,7 +2,7 @@ function ProfileImage(props) {
     return(
         <div>
             <img
-                src={props.tweet.user.image}
+                src={props.image}
                 className="profile"
                 alt="profile"
             />
@@ -10,4 +10,4 @@ function ProfileImage(props) {
     )
 }
 
-export default ProfileImage
+export default ProfileImage;

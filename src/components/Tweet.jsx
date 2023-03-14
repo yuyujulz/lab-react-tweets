@@ -5,26 +5,23 @@ import ProfileImage from './ProfileImage'
 import Timestamp from './Timestamp'
 
 function Tweet(props) {
- 
+ console.log(props)
    
   return (
     <div className="tweet">
-      <ProfileImage image={props.user.image}/>
+      <ProfileImage image={props.tweet.user.image}/>
 
       <div className="body">
         <div className="top">
-          <span className="user">
-            <User user={props.user.name}/>
-            
-          </span>
-
-          <Timestamp timestamp={Timestamp}/>
+          
+            <User user={props.tweet.user}/>
+            <Timestamp timestamp={props.tweet.timestamp}/>
         </div>
 
         
-          <Message message={Message}/>
+          <Message message={props.tweet.message}/>
         
-          <Actions actions={Actions}/>
+          <Actions />
       </div>
 
       <i className="fas fa-ellipsis-h"></i>
